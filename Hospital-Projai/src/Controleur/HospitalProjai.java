@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hospital.projai.Batiment;
+package Controleur;
+import Vue.fenetreaccueil;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import jdbcv2018.*;

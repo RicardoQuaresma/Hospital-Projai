@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hospital.projai.Personne;
+package Modele;
 
 /**
  *
- * @author Louis
+ * @author Ricardo
  */
-public class Infirmier {
+public class RechercheInformations {
     
 }

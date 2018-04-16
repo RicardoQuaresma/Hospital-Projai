@@ -1,4 +1,4 @@
-package hospital.projai.Batiment;
+package Vue;
 
 
 
@@ -58,7 +58,7 @@ public class fenetreaccueil extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(459, 605, 106, 29);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/projai/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1030, 640);
 

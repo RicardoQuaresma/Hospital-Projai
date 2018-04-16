@@ -70,7 +70,7 @@
     <Component class="javax.swing.JButton" name="jButton3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/hospital/projai/cartoon-1295191_960_720.png"/>
+          <Image iconType="3" name="/Vue/cartoon-1295191_960_720.png"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
       </Properties>
@@ -125,7 +125,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/hospital/projai/medical-free-vector-background-with-heart-monitor.jpg"/>
+          <Image iconType="3" name="/Vue/medical-free-vector-background-with-heart-monitor.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
       </Properties>

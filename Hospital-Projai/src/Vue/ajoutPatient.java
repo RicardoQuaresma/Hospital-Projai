@@ -1,9 +1,9 @@
-package hospital.projai.Batiment;
-import hospital.projai.Personne.Docteur;
-import hospital.projai.Personne.Employe;
-import hospital.projai.Personne.Infirmier;
-import hospital.projai.Personne.Malade;
-import hospital.projai.Personne.Personne;
+package Vue;
+import Modele.Docteur;
+import Modele.Employe;
+import Modele.Infirmier;
+import Modele.Malade;
+import Modele.Personne;
 
 
 
@@ -112,7 +112,7 @@ public class ajoutPatient extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(420, -10, 780, 140);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/projai/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1030, 640);
 

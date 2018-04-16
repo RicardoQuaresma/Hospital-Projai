@@ -1,4 +1,4 @@
-package hospital.projai.Batiment;
+package Vue;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -65,7 +65,7 @@ public class fenetreprincipale extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(20, 10, 158, 29);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/projai/cartoon-1295191_960_720.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/cartoon-1295191_960_720.png"))); // NOI18N
         jButton3.setBorderPainted(false);
         getContentPane().add(jButton3);
         jButton3.setBounds(980, 10, 40, 30);
@@ -89,7 +89,7 @@ public class fenetreprincipale extends javax.swing.JFrame {
         getContentPane().add(jTextField1);
         jTextField1.setBounds(630, 10, 120, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/projai/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1030, 640);
