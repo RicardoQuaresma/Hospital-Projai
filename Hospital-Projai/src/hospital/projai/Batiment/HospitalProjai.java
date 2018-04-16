@@ -5,6 +5,7 @@
  */
 package hospital.projai.Batiment;
 
+
 /**
  *
  * @author Ricardo
@@ -15,7 +16,9 @@ public class HospitalProjai {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        fenetreaccueil fen;
+        fen=new fenetreaccueil(); 
+        fen.setVisible(true);// TODO code application logic here
     }
     
 }

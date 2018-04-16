@@ -1,3 +1,7 @@
+package hospital.projai.Batiment;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -46,6 +50,11 @@ public class fenetreaccueil extends javax.swing.JFrame {
         jLabel3.setBounds(390, 318, 237, 30);
 
         jButton1.setText("Continuer");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(459, 605, 106, 29);
 
@@ -55,6 +64,11 @@ public class fenetreaccueil extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+     this.setVisible(false);
+      new fenetreprincipale().setVisible(true);   // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

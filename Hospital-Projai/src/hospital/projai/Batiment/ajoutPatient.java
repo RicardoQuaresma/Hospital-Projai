@@ -1,3 +1,12 @@
+package hospital.projai.Batiment;
+import hospital.projai.Personne.Docteur;
+import hospital.projai.Personne.Employe;
+import hospital.projai.Personne.Infirmier;
+import hospital.projai.Personne.Malade;
+import hospital.projai.Personne.Personne;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -81,6 +90,11 @@ public class ajoutPatient extends javax.swing.JFrame {
         champMutuelle.setBounds(40, 476, 200, 50);
 
         bouttonAjouterlePatient.setText("Ajouter le Patient");
+        bouttonAjouterlePatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bouttonAjouterlePatientActionPerformed(evt);
+            }
+        });
         getContentPane().add(bouttonAjouterlePatient);
         bouttonAjouterlePatient.setBounds(830, 520, 170, 29);
 
@@ -118,8 +132,23 @@ public class ajoutPatient extends javax.swing.JFrame {
     }//GEN-LAST:event_champAdresseActionPerformed
 
     private void boutonAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boutonAnnulerActionPerformed
-        // TODO add your handling code here:
+     this.setVisible(false);
+      new fenetreprincipale().setVisible(true);    // TODO add your handling code here:
     }//GEN-LAST:event_boutonAnnulerActionPerformed
+
+    private void bouttonAjouterlePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonAjouterlePatientActionPerformed
+        Malade m1;
+        m1=new Malade();
+        
+        m1.setNomPersonne(champNom.getText());
+        m1.setPrenomPersonne(champPrenom.getText());
+        m1.setNumeroPersonne(champNumeroPatient.getText());
+        m1.setTelephone(champTéléphone.getText());
+        m1.setMutuelle(champMutuelle.getText());
+        
+        this.setVisible(false);
+      new fenetreprincipale().setVisible(true);          // TODO add your handling code here:
+    }//GEN-LAST:event_bouttonAjouterlePatientActionPerformed
 
     /**
      * @param args the command line arguments

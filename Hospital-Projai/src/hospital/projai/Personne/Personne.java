@@ -11,7 +11,7 @@ package hospital.projai.Personne;
  */
 public class Personne {
     
-    protected int m_numeroPersonne,m_telephone;
+    protected String m_numeroPersonne,m_telephone;
     protected String m_nom,m_prenom,m_adresse ;
     
     
@@ -33,11 +33,11 @@ public class Personne {
    {
        m_adresse=adresse;
    }
-   public void setTelephone(int telephone)
+   public void setTelephone(String telephone)
    {
        m_telephone=telephone;
    }
-   public void setNumeroPersonne(int numeropersonne)
+   public void setNumeroPersonne(String numeropersonne)
    {
        m_numeroPersonne=numeropersonne;
    }
@@ -55,11 +55,11 @@ public class Personne {
    {
        return m_adresse;
    }
-   public int getTelephone()
+   public String getTelephone()
    {
        return m_telephone;
    }
-   public int getNumeroPersonne()
+   public String getNumeroPersonne()
    {
        return m_numeroPersonne;
    }

@@ -9,6 +9,13 @@ package hospital.projai.Personne;
  *
  * @author Louis
  */
-public class Malade {
+public class Malade extends Personne {
+    
+    private String m_mutuelle;
+    
+    public void setMutuelle(String mutuelle)
+    {m_mutuelle=mutuelle;}
+    
+    public String getMutuelle(){return m_mutuelle;}
     
 }

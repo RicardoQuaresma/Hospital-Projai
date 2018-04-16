@@ -1,3 +1,5 @@
+package hospital.projai.Batiment;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -55,6 +57,11 @@ public class fenetreprincipale extends javax.swing.JFrame {
         jScrollPane1.setBounds(0, 54, 1030, 590);
 
         jButton1.setText("Ajouter un patient");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(20, 10, 158, 29);
 
@@ -63,14 +70,24 @@ public class fenetreprincipale extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(980, 10, 40, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selectionnez", "Patient", "Docteur", "Infirmier", "Numero", "Batiment", " " }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(870, 10, 96, 27);
+        jComboBox1.setBounds(790, 10, 135, 27);
 
         jTextField1.setFont(new java.awt.Font("Lucida Grande", 2, 13)); // NOI18N
         jTextField1.setText("Recherche");
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(730, 10, 120, 30);
+        jTextField1.setBounds(630, 10, 120, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospital/projai/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -79,6 +96,19 @@ public class fenetreprincipale extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      this.setVisible(false);
+      new ajoutPatient().setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
