@@ -31,7 +31,11 @@ public class HospitalProjai {
         
         Connexion c1;
         
+<<<<<<< Updated upstream
         ArrayList<String> r1, r2, r3, r4,r5;
+=======
+        ArrayList<String> r1, r2, r3, r4, r5;
+>>>>>>> Stashed changes
         c1= new Connexion ("hopital","root","root");
         r1=c1.remplirChampsRequete("SELECT  prenom, nom  FROM malade WHERE mutuelle='MAAF'");
         
@@ -54,12 +58,13 @@ public class HospitalProjai {
         }
         
         System.out.println("\n\n\n BAT B MUTUELLE: \n\n");
-        r4=c1.remplirChampsRequete(        "SELECT DISTINCT hospitalisation.lit, hospitalisation.no_chambre, service.nom, malade.prenom, malade.nom, malade.mutuelle  FROM  malade, hospitalisation, service WHERE mutuelle LIKE 'MN%' AND hospitalisation.no_malade=malade.numero AND service.code=hospitalisation.code_service AND service.batiment='B'");
+        r4=c1.remplirChampsRequete("SELECT DISTINCT hospitalisation.lit, hospitalisation.no_chambre, service.nom, malade.prenom, malade.nom, malade.mutuelle  FROM  malade, hospitalisation, service WHERE mutuelle LIKE 'MN%' AND hospitalisation.no_malade=malade.numero AND service.code=hospitalisation.code_service AND service.batiment='B'");
         for(int i=0 ; i<r4.size(); i++)
         {
             System.out.println(r4.get(i));
         }
         
+<<<<<<< Updated upstream
         System.out.println("\n\n\n Moyenne salaire: \n\n");
         r5=c1.remplirChampsRequete(        "SELECT code_service, AVG(salaire)  FROM  infirmier GROUP BY code_service");
         for(int i=0 ; i<r4.size(); i++)
@@ -67,6 +72,16 @@ public class HospitalProjai {
             System.out.println(r5.get(i));
         }
         
+=======
+        
+        
+        System.out.println("\n\n\n SALAIRE PAR SERVICE: \n\n");
+        r5=c1.remplirChampsRequete("SELECT code_service, AVG(salaire)  FROM  infirmier GROUP BY code_service");
+        for(int i=0 ; i<r5.size(); i++)
+        {
+            System.out.println(r5.get(i));
+        }
+>>>>>>> Stashed changes
     }
     
 }
