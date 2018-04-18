@@ -1,20 +1,5 @@
 package Vue;
 
-
-
-import Modele.RechercheInformations;
-
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import jdbcv2018.Connexion;
-
-import javax.swing.JTextField;
-import Vue.ajoutPatient;
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -115,36 +100,14 @@ public class fenetreprincipale extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       this.setVisible(false);
       new ajoutPatient().setVisible(true);// TODO add your handling code here:
-      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-
-        JTextField text = (JTextField)evt.getSource();
-        String textCast;
-        textCast=text.getText();
-        RechercheInformations r1;
-        r1=new RechercheInformations (textCast);
-        ArrayList <String> resultatRecherche=null;
-        try {
-            resultatRecherche=r1.recherche();
-        } catch (SQLException ex) {
-            Logger.getLogger(fenetreprincipale.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(fenetreprincipale.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        Object[][] donnees={{"Michel", "Tamere"},{"Pute", "Suce"}};
-        
-        for(int i=0 ; i<resultatRecherche.size(); i++)
-        {
-            System.out.println(resultatRecherche.get(i));
-        }
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
@@ -178,24 +141,6 @@ public class fenetreprincipale extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new fenetreprincipale().setVisible(true);
-                    ArrayList<String> r1, r2, r3, r4,r5;
-                Connexion c1;
-                try {
-                    c1 = new Connexion ("hopital","root","root");
-                    r1=c1.remplirChampsRequete("SELECT*FROM malade");
-                    for(int i=0 ; i<r1.size(); i++)
-        {
-            
-            System.out.println(r1.get(i));
-           
-            
-            
-        }
-                } catch (SQLException ex) {
-                    Logger.getLogger(ajoutPatient.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(ajoutPatient.class.getName()).log(Level.SEVERE, null, ex);
-                }
             }
         });
     }
