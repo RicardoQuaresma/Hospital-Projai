@@ -49,6 +49,9 @@ public class fenetreprincipale extends javax.swing.JFrame {
 =======
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+<<<<<<< HEAD
+>>>>>>> parent of ef17aec... bouton6 test
+=======
 >>>>>>> parent of ef17aec... bouton6 test
         jLabel1 = new javax.swing.JLabel();
 
@@ -299,6 +302,9 @@ public class fenetreprincipale extends javax.swing.JFrame {
 =======
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+<<<<<<< HEAD
+>>>>>>> parent of ef17aec... bouton6 test
+=======
 >>>>>>> parent of ef17aec... bouton6 test
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
