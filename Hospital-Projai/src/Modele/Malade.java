@@ -18,4 +18,16 @@ public class Malade extends Personne {
     
     public String getMutuelle(){return m_mutuelle;}
     
+    
+    public void afficherInfosMalade()
+    {
+        System.out.println("Nom : " +m_nom);
+        System.out.println("Prénom : " +m_prenom);
+        System.out.println("Adresse : " +m_adresse);
+        System.out.println("Téléphone : " +m_telephone);
+        System.out.println("Numéro : " +m_numeroPersonne);
+        System.out.println("Mutuelle : " +m_mutuelle);
+        
+    }
+    
 }

@@ -145,6 +145,10 @@ public class ajoutPatient extends javax.swing.JFrame {
         m1.setNumeroPersonne(champNumeroPatient.getText());
         m1.setTelephone(champTéléphone.getText());
         m1.setMutuelle(champMutuelle.getText());
+        m1.setAdresse(champAdresse.getText());
+        
+        m1.afficherInfosMalade();
+        
         new fenetreprincipale().setVisible(true); 
         this.setVisible(false);
                // TODO add your handling code here:
