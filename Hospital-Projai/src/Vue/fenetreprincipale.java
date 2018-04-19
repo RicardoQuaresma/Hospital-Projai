@@ -46,6 +46,7 @@ public class fenetreprincipale extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -118,6 +119,10 @@ public class fenetreprincipale extends javax.swing.JFrame {
         jButton4.setText("jButton4");
         getContentPane().add(jButton4);
         jButton4.setBounds(420, 20, 97, 29);
+
+        jButton5.setText("jButton5");
+        getContentPane().add(jButton5);
+        jButton5.setBounds(0, 0, 97, 29);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -285,6 +290,7 @@ public class fenetreprincipale extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
