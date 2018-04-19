@@ -145,9 +145,9 @@ public class ajoutPatient extends javax.swing.JFrame {
         m1.setNumeroPersonne(champNumeroPatient.getText());
         m1.setTelephone(champTéléphone.getText());
         m1.setMutuelle(champMutuelle.getText());
-        
+        new fenetreprincipale().setVisible(true); 
         this.setVisible(false);
-      new fenetreprincipale().setVisible(true);          // TODO add your handling code here:
+               // TODO add your handling code here:
     }//GEN-LAST:event_bouttonAjouterlePatientActionPerformed
 
     /**

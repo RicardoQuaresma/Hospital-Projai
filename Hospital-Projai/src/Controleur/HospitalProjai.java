@@ -32,7 +32,9 @@ public class HospitalProjai {
         Connexion c1;
         
         ArrayList<String> r1, r2, r3, r4, r5;
+        
         c1= new Connexion ("hopital","root","root");
+        /*
         r1=c1.remplirChampsRequete("SELECT  prenom, nom  FROM malade WHERE mutuelle='MAAF'");
         
         for(int i=0 ; i<r1.size(); i++)
@@ -75,6 +77,7 @@ public class HospitalProjai {
         {
             System.out.println(r5.get(i));
         }
+*/
     }
     
 }

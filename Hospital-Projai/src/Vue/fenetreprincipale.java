@@ -5,7 +5,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableColumnModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -49,13 +52,18 @@ public class fenetreprincipale extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -77,14 +85,14 @@ public class fenetreprincipale extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(980, 10, 40, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selectionnez", "Patient", "Docteur", "Infirmier", "Numero", "Batiment", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient", "Employe", "Numero", "Batiment", " " }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(790, 10, 135, 27);
+        jComboBox1.setBounds(790, 10, 111, 27);
 
         jTextField1.setFont(new java.awt.Font("Lucida Grande", 2, 13)); // NOI18N
         jTextField1.setText("Recherche");
@@ -120,23 +128,101 @@ public class fenetreprincipale extends javax.swing.JFrame {
         JTextField text = (JTextField)evt.getSource();
         String textCast;
         textCast=text.getText();
+        String choix;
+        choix=jComboBox1.getSelectedItem().toString();
         RechercheInformations r1;
+        
         r1=new RechercheInformations (textCast);
         ArrayList <String> resultatRecherche=null;
         try {
-            resultatRecherche=r1.recherche();
+            resultatRecherche=r1.recherche(choix);
         } catch (SQLException ex) {
             Logger.getLogger(fenetreprincipale.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(fenetreprincipale.class.getName()).log(Level.SEVERE, null, ex);
         }
-        Object[][] donnees={{"Michel", "Tamere"},{"Pute", "Suce"}};
+        
+        switch(choix)
+        {
+            
+            case "Patient" : 
+            {
+                jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [resultatRecherche.size()][6] ,
+                new String [] {
+                    "Numéro", "Nom", "Prénom", "Adresse", "Téléphone", "Mutuelle"
+                }
+                ));
+                jScrollPane1.setViewportView(jTable1);
+
+                getContentPane().add(jScrollPane1);
+                jScrollPane1.setBounds(0, 54, 1030, 590);
+                }
+            break;
+            case "Employe" : 
+            {
+                jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [resultatRecherche.size()][5] ,
+                new String [] {
+                    "Numéro", "Nom", "Prénom", "Adresse", "Téléphone"
+                }
+                ));
+                jScrollPane1.setViewportView(jTable1);
+
+                getContentPane().add(jScrollPane1);
+                jScrollPane1.setBounds(0, 54, 1030, 590);
+            }
+            break;
+            
+            case "Numero" : 
+            {
+                jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object [resultatRecherche.size()][5] ,
+                new String [] {
+                    "Numéro", "Nom", "Prénom", "Adresse", "Téléphone"
+                }
+                ));
+                jScrollPane1.setViewportView(jTable1);
+
+                getContentPane().add(jScrollPane1);
+                jScrollPane1.setBounds(0, 54, 1030, 590);
+            }
+            break;
+            case "Batiment" : 
+            {
+                
+            }
+            break;
+                    
+        }
+        
         
         for(int i=0 ; i<resultatRecherche.size(); i++)
         {
-            System.out.println(resultatRecherche.get(i));
+            
+            int champSuivant=0;
+            String chaineTemp="";
+            for(int j=0 ; j<resultatRecherche.get(i).length(); j++)
+            {
+                if(resultatRecherche.get(i).charAt(j)==';' || j==(resultatRecherche.get(i).length()-1))
+                {
+                    jTable1.setValueAt(chaineTemp, i, champSuivant);
+                    champSuivant++;
+                    chaineTemp="";
+                }
+                else
+                {
+                   chaineTemp+=resultatRecherche.get(i).charAt(j);
+                }
+            }
+            
         }
         
+        
+        
+        
+        
+        //jTable1.addColumn(new TableColumn(modelColumn, width, cellRenderer, cellEditor));
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**

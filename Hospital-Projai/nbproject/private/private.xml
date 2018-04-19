@@ -5,6 +5,8 @@
         <group>
             <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Controleur/HospitalProjai.java</file>
             <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Vue/fenetreprincipale.java</file>
+            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/jdbcv2018/Connexion.java</file>
+            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Vue/ajoutPatient.java</file>
             <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Modele/RechercheInformations.java</file>
         </group>
     </open-files>
