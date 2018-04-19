@@ -44,6 +44,7 @@ public class fenetreprincipale extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -103,6 +104,15 @@ public class fenetreprincipale extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField1);
         jTextField1.setBounds(630, 10, 120, 30);
+
+        jButton2.setText("Diagramme");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(220, 10, 116, 29);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vue/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -225,6 +235,11 @@ public class fenetreprincipale extends javax.swing.JFrame {
         //jTable1.addColumn(new TableColumn(modelColumn, width, cellRenderer, cellEditor));
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       this.setVisible(false);
+      new fenetreDiagramme().setVisible(true); // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -262,6 +277,7 @@ public class fenetreprincipale extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;

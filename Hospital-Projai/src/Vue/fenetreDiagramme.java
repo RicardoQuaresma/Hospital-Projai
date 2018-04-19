@@ -5,6 +5,19 @@
  */
 package Vue;
 
+import java.awt.Color;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import jdbcv2018.Connexion;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+
 /**
  *
  * @author Ricardo
@@ -27,21 +40,67 @@ public class fenetreDiagramme extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel2 = new javax.swing.JLabel();
+        diagramme1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1026, 660));
+        getContentPane().setLayout(null);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 3, 24)); // NOI18N
+        jLabel2.setText("Fenetre de Diagramme");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(310, 20, 620, 40);
+
+        diagramme1.setText("Nombre personne Hopital");
+        diagramme1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                diagramme1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(diagramme1);
+        diagramme1.setBounds(20, 140, 200, 29);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vue/medical-free-vector-background-with-heart-monitor.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 1020, 640);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void diagramme1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diagramme1ActionPerformed
+        // TODO add your handling code here:DefaultCategoryDataset diagrammebar = new DefaultCategoryDataset(); 
+    
+    Connexion c;
+    ArrayList<String> r1,r2,r3;
+    DefaultCategoryDataset diagrammebar = new DefaultCategoryDataset(); 
+    
+        try {
+            c= new Connexion ("hopital","root","root");
+            r1=c.remplirChampsRequete("SELECT  prenom  FROM docteur ");
+            r2=c.remplirChampsRequete("SELECT  prenom  FROM infirmier ");
+            r3=c.remplirChampsRequete("SELECT prenom FROM malade");
+            
+            diagrammebar.setValue(r1.size(),"Nombre","Docteur");
+            diagrammebar.setValue(r2.size(),"Nombre","Infirmer");
+            diagrammebar.setValue(r3.size(),"Nombre","Malade");
+            
+            JFreeChart barChartData=ChartFactory.createBarChart("Nombre de personnes dans l'hopital", "Metier" , "Nombre", diagrammebar, PlotOrientation.VERTICAL, false, true, false);
+            CategoryPlot diagramme1 = barChartData.getCategoryPlot();
+            diagramme1.setRangeGridlinePaint(Color.GREEN);
+            
+            ChartPanel barPanel=new ChartPanel (barChartData);
+            barPanel.removeAll();
+            barPanel.validate();  // CODE INSPIRÉ DE https://www.youtube.com/watch?v=Jz8-ap--ZUA&t=674s
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(fenetreDiagramme.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(fenetreDiagramme.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_diagramme1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +138,8 @@ public class fenetreDiagramme extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton diagramme1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

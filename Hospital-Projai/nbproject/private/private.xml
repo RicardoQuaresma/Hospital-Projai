@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Controleur/HospitalProjai.java</file>
-            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Vue/fenetreprincipale.java</file>
-            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/jdbcv2018/Connexion.java</file>
-            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Vue/ajoutPatient.java</file>
-            <file>file:/Users/Ricardo/Desktop/Hospital-Projai/Hospital-Projai/src/Modele/RechercheInformations.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/vue/ajoutPatient.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/Modele/Personne.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/vue/fenetreprincipale.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/jdbcv2018/SSHTunnel.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/jdbcv2018/Connexion.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/Modele/RechercheInformations.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/vue/NewJFrame.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/vue/fenetreaccueil.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/vue/fenetreDiagramme.java</file>
+            <file>file:/Users/Louis/Documents/GitHub/Hospital-Projai/Hospital-Projai/src/Controleur/HospitalProjai.java</file>
         </group>
     </open-files>
 </project-private>
