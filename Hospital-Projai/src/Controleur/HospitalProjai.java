@@ -31,7 +31,7 @@ public class HospitalProjai {
         
         Connexion c1;
         
-        ArrayList<String> r1, r2, r3, r4, r5;
+        ArrayList<String> r1, r2, r3, r4, r5, r6,r7,r8;
         c1= new Connexion ("hopital","root","root");
         r1=c1.remplirChampsRequete("SELECT  prenom, nom  FROM malade WHERE mutuelle='MAAF'");
         
@@ -75,6 +75,23 @@ public class HospitalProjai {
         {
             System.out.println(r5.get(i));
         }
+        
+        System.out.println("\n\n\n NOMBRE LIT PAR SERVICE DU BATIEMENT A: \n\n");
+        r6=c1.remplirChampsRequete("SELECT code_service, AVG(nb_lits),batiment  FROM service,chambre WHERE batiment='A' GROUP BY code_service ");
+        for(int i=0 ; i<r6.size(); i++)
+        {
+            System.out.println(r6.get(i));
+        }
+        
+        
+        
+        
+       
+        
+        
+        
+        
+        
     }
     
 }
