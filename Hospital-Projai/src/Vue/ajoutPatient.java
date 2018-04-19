@@ -155,15 +155,20 @@ public class ajoutPatient extends javax.swing.JFrame {
         
         m1.afficherInfosMalade();
         
+        
+        
         try {
             c1= new Connexion ("hopital","root","root");
-            c1.executeUpdate("INSERT INTO malade\n" +
-"VALUES ('7667',\n" +
-"'tamere',\n" +
-"'lapute',\n" +
-"'43 rue Vauvenargues, 78000 Versailles',\n" +
-"'01 52 53 23 82',\n" +
-"'MNAM')");
+            if(c1.remplirChampsRequete("SELECT * FROM malade WHERE numero='"+champNumeroPatient.getText()+"'")!=null)
+            {
+                System.out.println("ojzlzlez");
+            }
+            else
+            {
+                c1.executeUpdate("INSERT INTO malade\n" +
+                "VALUES ('"+champNumeroPatient.getText()+"',\n" + "'"+champNom.getText()+"',\n" + "'"+
+                champPrenom.getText()+"',\n" + "'"+champAdresse.getText()+"',\n" + "'"+champTéléphone.getText()+"',\n" + "'"+champMutuelle.getText()+"')");
+            }
         } catch (SQLException ex) {
             Logger.getLogger(ajoutPatient.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

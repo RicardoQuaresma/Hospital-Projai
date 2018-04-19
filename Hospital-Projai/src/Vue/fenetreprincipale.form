@@ -134,6 +134,8 @@
         </Constraint>
       </Constraints>
     </Component>
+<<<<<<< HEAD
+=======
     <Component class="javax.swing.JButton" name="jButton4">
       <Properties>
         <Property name="text" type="java.lang.String" value="jButton4"/>
@@ -154,6 +156,7 @@
         </Constraint>
       </Constraints>
     </Component>
+>>>>>>> origin/ouais
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
