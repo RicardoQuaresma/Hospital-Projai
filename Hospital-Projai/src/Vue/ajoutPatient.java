@@ -4,6 +4,10 @@ import Modele.Employe;
 import Modele.Infirmier;
 import Modele.Malade;
 import Modele.Personne;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import jdbcv2018.Connexion;
 
 
 
@@ -139,6 +143,8 @@ public class ajoutPatient extends javax.swing.JFrame {
     private void bouttonAjouterlePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouttonAjouterlePatientActionPerformed
         Malade m1;
         m1=new Malade();
+        Connexion c1;
+        
         
         m1.setNomPersonne(champNom.getText());
         m1.setPrenomPersonne(champPrenom.getText());
@@ -148,6 +154,21 @@ public class ajoutPatient extends javax.swing.JFrame {
         m1.setAdresse(champAdresse.getText());
         
         m1.afficherInfosMalade();
+        
+        try {
+            c1= new Connexion ("hopital","root","root");
+            c1.executeUpdate("INSERT INTO malade\n" +
+"VALUES ('7667',\n" +
+"'tamere',\n" +
+"'lapute',\n" +
+"'43 rue Vauvenargues, 78000 Versailles',\n" +
+"'01 52 53 23 82',\n" +
+"'MNAM')");
+        } catch (SQLException ex) {
+            Logger.getLogger(ajoutPatient.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ajoutPatient.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         new fenetreprincipale().setVisible(true); 
         this.setVisible(false);
